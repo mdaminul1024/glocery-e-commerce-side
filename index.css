@@ -22,9 +22,25 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
 }
-body{
-    color: white;
+
+.btn{
+margin-top: 1rem;
+display: inline-block;
+padding: .8rem 3rem;
+font-size: 1.7rem;
+border-radius: .5rem;
+border: .2rem solid var(--black);
+color: var(--black);
+cursor: pointer;
+
 }
+.btn:hover{
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+    transition: 0.2s ease-in;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -111,4 +127,70 @@ body{
 }
 .header .search-form label:hover{
     color: var(--orange);
+}
+
+/* shopping cart */
+.header .shopping-cart{
+    position:absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+.header .shopping-cart .box img{
+    height: 10rem;
+}
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 36%;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+
+}
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--orange);
+}
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+.header .shopping-cart .box .content .price{
+    padding-right: 1rem;
+}
+.header .shopping-cart .total{
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+    font-weight: 500;
+}
+.header .shopping-cart .btn{
+    margin: 1rem;
+   display: block;
+   text-align: center;
+
+}
+.header .shopping-cart.active{
+    right: 2rem;
+    transform: .4s ease-in-out;
 }
