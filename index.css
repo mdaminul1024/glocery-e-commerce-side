@@ -1,8 +1,8 @@
 :root{
-    --orange: #ff7800;
+    --orange: #198d19;
     --black: #130f40;
     --light-color: #666;
-    --box-shadow: 0.5rem 1rem rgba(0,0,0,.06);
+    --box-shadow: 0rem 0rem 1rem 0.2rem rgba(0,0,0,0.06);
 }
 
 *{
@@ -32,6 +32,7 @@ border-radius: .5rem;
 border: .2rem solid var(--black);
 color: var(--black);
 cursor: pointer;
+font-weight: 500;
 
 }
 .btn:hover{
@@ -100,6 +101,7 @@ cursor: pointer;
  display: flex;
  align-items: center;
  border-radius: 8px;
+ 
 
  
 }
@@ -192,5 +194,108 @@ cursor: pointer;
 }
 .header .shopping-cart.active{
     right: 2rem;
-    transform: .4s ease-in-out;
+    transform: .4s linear;
+}
+
+.header .login-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+    text-align: center;
+   
+}
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+
+}
+.header .login-form .box{
+    margin: .7rem 0;
+    background: rgb(248, 248, 248);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+}
+.header .login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+.header .login-form p a{
+    color: var(--orange);
+    text-decoration: underline;
+}
+.header .login-form .btn{
+   
+   text-align: center;
+   width: 25rem;
+   background: var(--orange);
+   color: #fff;
+   border-color: var(--orange);
+   margin-bottom: .5rem;
+} 
+.header .login-form .btn:hover{
+    background: #fff;
+    color: var(--orange);
+    
+}
+#menu-btn{
+    display: none;
+}
+
+
+
+
+/* media queries  */
+/* media queries  */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+}
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-sizing: var(--box-shadow);
+        border-radius: 1rem;
+        background: rgb(250, 250, 250);
+        line-height: 3rem;
+        
+    }
+    .header .navbar.active{
+        right: 2rem;
+        transition: 0.4s linear;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
 }
